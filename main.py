@@ -1,6 +1,6 @@
 import random
 from data import words
-
+from terminal_ui import show_graphic
 
 player1 = {'numErr': 0}
 
@@ -12,85 +12,8 @@ def random_word() -> tuple[str, str, str]:
     return random_key, random_value, mask_word
 
 
-
 def welcome():
-    print("G A L L O W S")
-
-
-def show_graphic(n: int):
-    match n:
-        case 1:
-            print(r"""
-    +---+  
-        |  
-        |  
-        |  
-        |  
-        |  
-=========""")
-        case 2:
-            print(r"""
-    +---+  
-    |   |  
-        |  
-        |  
-        |  
-        |  
-=========""")
-        case 3:
-            print(r"""
-    +---+  
-    |   |  
-    O   |  
-        |  
-        |  
-        |  
-=========""")
-        case 4:
-            print(r"""
-    +---+  
-    |   |  
-    O   |  
-   /    |  
-        |  
-        |  
-=========""")
-        case 5:
-            print(r"""
-    +---+  
-    |   |  
-    O   |  
-   / \  |  
-        |  
-        |  
-=========""")
-        case 6:
-            print(r"""
-    +---+  
-    |   |  
-    O   |  
-   /|\  |  
-        |  
-        |  
-=========""")
-        case 7:
-            print(r"""
-    +---+  
-    |   |  
-    O   |  
-   /|\  |  
-   /    |  
-        |  
-=========""")
-        case 8:
-            print(r"""
-    +---+  
-    |   |  
-    O   |  
-   /|\  |  
-   / \  |  
-        |  
-=========""")
+    print("G A M E - G A L L O W S")
 
 
 if __name__ == '__main__':
