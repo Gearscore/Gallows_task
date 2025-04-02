@@ -2,7 +2,7 @@ import random
 from data import words
 import terminal_ui
 from sys import exit as sys_exit
-
+import os
 
 
 def createPlayer() -> dict:
@@ -47,6 +47,7 @@ def restart_game():
 
 
 def main_func():
+    os.system('title ver.1.0 "GAME GALLOWS"')
     PLAYER_1 = createPlayer()
     # print(' '.join(i[0] for i in PLAYER_1['secretWords']))
     while True:
