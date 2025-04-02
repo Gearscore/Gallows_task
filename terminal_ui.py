@@ -2,7 +2,7 @@ def welcome():
     print('И Г Р А - "В И С Е Л И Ц А"')
 
 
-def show_drawing(frameNum: int):
+def show_gallows(frameNum: int):
     match frameNum:
         case 0:
             print(r"""
@@ -78,8 +78,8 @@ def show_drawing(frameNum: int):
 =========""")
 
 
-def nextGameStep(p: dict):
-    show_drawing(len(p["errLetters"]))
+def infoStatusGame(p: dict):
+    show_gallows(len(p["errLetters"]))
     print(f"Загаданное слово - {' '.join(i[1] for i in p['secretWords'])}\nПодсказка ({p['descriptionWords']})")
     if p['errLetters']:
         print(f"Ошибочные буквы: {' '.join(p['errLetters'])}")

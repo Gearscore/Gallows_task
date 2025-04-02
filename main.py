@@ -1,7 +1,7 @@
 import random
 from data import words
-from terminal_ui import welcome, show_drawing, nextGameStep, inputPlayer
-from sys import exit
+import terminal_ui
+from sys import exit as sys_exit
 
 
 def createPlayer() -> dict:
@@ -26,7 +26,7 @@ def searchLetter(p: dict, l: str):
 
 def checkVictoryOrLoss(p: dict) -> bool:
     if len(p["errLetters"]) == 7:
-        show_drawing(len(p["errLetters"]))
+        terminal_ui.show_gallows(len(p["errLetters"]))
         print("Вы проиграли Вас повесили!!!")
         return True
     if tuple(i[0] for i in p['secretWords']) == tuple(i[1] for i in p['secretWords']):
@@ -41,16 +41,16 @@ def restart_game():
         if s in ("да", "нет"):
             if s == "да":
                 main_func()
-            exit(0)
+            sys_exit(0)
 
 
 def main_func():
-    welcome()
+    terminal_ui.welcome()
     PLAYER_1 = createPlayer()
     # print(' '.join(i[0] for i in PLAYER_1['secretWords']))
     while True:
-        nextGameStep(PLAYER_1)
-        letter = inputPlayer(PLAYER_1)
+        terminal_ui.infoStatusGame(PLAYER_1)
+        letter = terminal_ui.inputPlayer(PLAYER_1)
         searchLetter(PLAYER_1, letter)
         if checkVictoryOrLoss(PLAYER_1):
             restart_game()
