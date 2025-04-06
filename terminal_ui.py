@@ -101,6 +101,4 @@ def inputPlayer(p: dict) -> str:
         s = input("Введите букву: ").lower()
         if len(s) == 1 and s.isalpha() and not s in p["errLetters"]:
             break
-        else:
-            print("Некорректный ввод ;(")
     return s
