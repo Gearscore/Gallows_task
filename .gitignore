@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
-requirements.txt
-release/
+release/*.spec
+release/build
+release/dist
 .idea/
 __pycache__/
 *.py[cod]

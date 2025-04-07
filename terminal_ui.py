@@ -100,5 +100,10 @@ def inputPlayer(p: dict) -> str:
     while True:
         s = input("Введите букву: ").lower()
         if len(s) == 1 and s.isalpha() and not s in p["errLetters"]:
+            if [s, s] in p["secretWords"]:
+                print("Эта буква уже угадана :)")
+                continue
             break
+        else:
+            print("Некорректный ввод ;(")
     return s
