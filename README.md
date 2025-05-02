@@ -33,7 +33,7 @@
 ```bash
 python -m venv venv
 ```
-- Активация окружния:  
+Активация окружния:  
   - Windows:  
     ```bash
     venv\Scripts\activate
