@@ -33,7 +33,15 @@
 ```bash
 python -m venv venv
 ```
-
+- Активация окружния:  
+  - Windows:  
+    ```bash
+    venv\Scripts\activate
+    ```  
+  - macOS/Linux:  
+    ```bash
+    source venv/bin/activate
+    ``` 
 Установка PyInstaller
 
 ```bash
